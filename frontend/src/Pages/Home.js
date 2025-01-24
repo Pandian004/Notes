@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import EditorJS from '../Components/Editor/Editor.js';
 import Navbar from '../Components/Navbar.js';
 import Sidebar from '../Components/Sidebar.js'
+// import Loader from '../Components/loader/loader.js';
 
 const Home = () => {
   const [data, setData] = useState(null)
@@ -20,6 +21,7 @@ const Home = () => {
           <EditorJS data={data} onChange={setData} editorBlock="editorjs-container" />
         </form>
       </div>
+      {/* <Loader /> */}
     </div>
   )
 }

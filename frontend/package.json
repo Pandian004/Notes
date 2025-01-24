@@ -14,6 +14,7 @@
     "@editorjs/underline": "^1.2.1",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "editor-js-alignment-tune": "^1.0.1",
     "editorjs-color-picker": "^1.0.6",

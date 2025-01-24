@@ -1,6 +1,5 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
-// import Dropdown from'./input/DropDown.js';
+import React from 'react';
+import Dropdown from'./input/DropDown.js';
 import { BiExport } from "react-icons/bi";
 
 const Navbar = ({isOpen}) => {
@@ -14,13 +13,9 @@ const Navbar = ({isOpen}) => {
           <p className='text-xl'><BiExport /></p>
           <button>Export as PDF</button>
         </div>
-        <div className='space-x-4'>
-          <Link to = '/login'><button className='p-2 px-3 rounded-3xl bg-slate-100'>Login</button></Link>
-          <Link to = '/signup'><button className='p-2 rounded-3xl bg-black text-white'>Signup</button></Link>  
-        </div>
-        {/* <div className=''>
+        <div className=''>
           <Dropdown />
-        </div> */}
+        </div>
       </div>
     </div>
   )
