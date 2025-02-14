@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Password from '../Components/input/Password.js';
 import {Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import { Toaster, toast } from 'sonner';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,12 +15,14 @@ const Login = () => {
     axios.post('http://localhost:5000/login', {email, password}, {withCredentials: true})
     .then(res => {console.log(res)
       if(res.status === 200){
+        toast.success("Login Success")
         navigate('/home')
         setErr('')
       }
     })
     .catch(err => {console.log(err)
       setErr(err.response.data)
+      toast.error("Login failed")
     });
 
   }
@@ -27,6 +30,7 @@ const Login = () => {
   return (
     <div className='h-screen flex justify-center items-center bg-slate-50'>
       <p className='text-left text-3xl absolute top-2 left-2'>Notes</p>
+      <Toaster richColors pauseWhenPageIsHidden />
       <div className='flex flex-col w-1/4 border-2 shadow-xl p-4 rounded-xl bg-white'>
         <div className='text-center my-4'>
           <p className='text-2xl'>Welcome back!</p>

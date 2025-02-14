@@ -4,6 +4,7 @@ import { MdOutlineLogout } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+
 export default function Dropdown() {
   const navigate = useNavigate();
   const [name, setName] = useState('');
@@ -11,7 +12,6 @@ export default function Dropdown() {
   function logout() {
     axios.post('http://localhost:5000/logout', {withCredentials: true})
     .then( res => {
-      console.log(res)
       navigate('/')
       setName('')
       setInitial('')
@@ -21,7 +21,7 @@ export default function Dropdown() {
 
   useEffect(() =>{
     axios.get('http://localhost:5000/profile', { withCredentials: true })
-    .then(res => {console.log(res)
+    .then(res => {
       setName(res.data.name)
       setInitial(res.data.name[0])
     })

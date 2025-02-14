@@ -7,7 +7,7 @@ import AlignmentTune from 'editor-js-alignment-tune';
 import ColorPicker from 'editorjs-color-picker';
 import Table from '@editorjs/table'
 import CodeTool from '@editorjs/code';
-import ImageTool from '@editorjs/image';
+// import ImageTool from '@editorjs/image';
 
 const EDITOR_JS_TOOLS = {
     paragraph: {
@@ -39,15 +39,15 @@ const EDITOR_JS_TOOLS = {
           captionPlaceholder: 'Quote\'s author',
         },
     },
-    image: {
-        class: ImageTool,
-        config: {
-          endpoints: {
-            byFile: 'http://localhost:8008/uploadFile', // Your backend file uploader endpoint
-            byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
-          }
-        }
-    },
+    // image: {
+    //     class: ImageTool,
+    //     config: {
+    //       endpoints: {
+    //         byFile: 'http://localhost:8008/uploadFile', // Your backend file uploader endpoint
+    //         byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
+    //       }
+    //     }
+    // },
     underline: Underline,
     alignmentTune: {
         class: AlignmentTune
